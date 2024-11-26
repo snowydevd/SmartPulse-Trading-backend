@@ -24,55 +24,23 @@ El backend de **SmartPulse Trading** es el núcleo del sistema que combina datos
 - API key de **MarketStack**  
 - Configuración de **AI Genkit**  
 
-## Instalación
+## Endpoints
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/usuario/smartpulse-backend.git
-   cd smartpulse-backend
-2. Instala las dependencias:
-   ```bash
-   composer install
+### Autenticación
+- `POST /auth/register`: Registro de nuevos usuarios.  
+- `POST /auth/login`: Inicio de sesión de usuarios existentes.  
 
-3. Configura las variables de entorno .env:
-- Configuración de base de datos.
-- Claves de la API de MarketStack.
-- Credenciales de Firebase.
-- Configuración para AI Genkit.
-- Genera la clave de aplicación:
+### Datos del mercado
+- `GET /market/data`: Obtiene datos de mercado en tiempo real desde la API de MarketStack.  
 
-bash
-Copy code
-php artisan key:generate
-Ejecuta las migraciones:
+### Recomendaciones con IA
+- `POST /ai/recommendations`: Genera recomendaciones y análisis basados en los últimos datos del mercado.  
 
-bash
-Copy code
-php artisan migrate
-Inicia el servidor:
+## Tecnologías utilizadas
 
-bash
-Copy code
-php artisan serve
-Endpoints
-Autenticación
-POST /auth/register: Registro de usuarios.
-POST /auth/login: Inicio de sesión.
-Datos del mercado
-GET /market/data: Obtiene datos de mercado desde MarketStack.
-Recomendaciones con IA
-POST /ai/recommendations: Genera recomendaciones basadas en los últimos datos del mercado.
-Tecnologías utilizadas
-Framework: Laravel
-API: MarketStack
-Autenticación: Firebase
-IA: AI Genkit
-Base de datos: MySQL / PostgreSQL (configurable)
-Contribuciones
-¡Contribuciones son bienvenidas! Por favor, sigue estos pasos para contribuir:
+- **Framework**: Laravel  
+- **API**: MarketStack  
+- **Autenticación**: Firebase  
+- **IA**: AI Genkit  
+- **Base de datos**: MySQL / PostgreSQL (configurable)  
 
-Haz un fork del repositorio.
-Crea una rama para tu funcionalidad (git checkout -b feature/nueva-funcionalidad).
-Realiza un pull request a la rama principal del repositorio.
-Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
