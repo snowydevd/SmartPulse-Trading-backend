@@ -1,4 +1,5 @@
 # SmartPulse Trading - Backend
+![SmartPulse (1)](https://github.com/user-attachments/assets/dcefa0ae-b958-4e99-b1f2-d2c336e0d50b)
 
 ## Descripción
 
